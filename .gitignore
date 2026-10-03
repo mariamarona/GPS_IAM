@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+env/
+*.db
+*.sqlite3
+
+# Flutter
+mobile_flutter/build/
+mobile_flutter/.dart_tool/
+mobile_flutter/.flutter-plugins
+
+# React
+frontend/iamgps-web/node_modules/
+frontend/iamgps-web/build/
+frontend/iamgps-web/dist/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

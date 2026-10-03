@@ -1,0 +1,198 @@
+.ens-stat-grid {
+  margin-bottom: 20px;
+}
+
+.ens-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  align-items: start;
+  margin-bottom: 20px;
+}
+
+.ens-card {
+  padding: 20px 22px;
+}
+
+.ens-card h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 16px;
+  color: var(--text-primary);
+}
+
+.ens-session-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ens-session-item {
+  padding: 12px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--bg-page);
+}
+
+.ens-session-item.active {
+  background: var(--blue-light);
+  border-color: var(--blue);
+}
+
+.ens-session-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.ens-session-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.badge.statut-en_cours { background: var(--green-light); color: var(--green); }
+.badge.statut-planifie { background: var(--border); color: var(--text-secondary); }
+.badge.statut-termine { background: var(--border); color: var(--text-muted); }
+.badge.statut-annulee { background: var(--red-light); color: var(--red); }
+
+.ens-session-count {
+  font-weight: 800;
+  font-size: 15px;
+  color: var(--text-primary);
+  flex-shrink: 0;
+}
+
+.ens-session-meta {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 6px;
+}
+
+.ens-session-btn {
+  width: 100%;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.ens-absents-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ens-absent-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-page);
+}
+
+.ens-absent-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: var(--red-light);
+  color: var(--red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.ens-absent-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.ens-tabs-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.ens-tabs {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.ens-tab {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 7px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.ens-tab.active {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: #fff;
+}
+
+.ens-charts-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.ens-chart-card {
+  padding: 16px 18px;
+}
+
+.ens-chart-card h3 {
+  font-size: 13px;
+  font-weight: 700;
+  margin: 0 0 10px;
+  color: var(--text-primary);
+}
+
+.ens-etudiants-table {
+  font-size: 13.5px;
+}
+
+.ens-etudiants-table th {
+  text-align: left;
+  padding: 10px 12px;
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  border-bottom: 1px solid var(--border);
+}
+
+.ens-etudiants-table td {
+  padding: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.ens-etudiants-table tr:last-child td {
+  border-bottom: none;
+}
+
+@media (max-width: 1100px) {
+  .ens-two-col {
+    grid-template-columns: 1fr;
+  }
+  .ens-charts-row {
+    grid-template-columns: 1fr;
+  }
+}

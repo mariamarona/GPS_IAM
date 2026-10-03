@@ -1,0 +1,252 @@
+.page-header-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.dashboard-lower {
+  display: grid;
+  grid-template-columns: minmax(0, 2.1fr) minmax(260px, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.weekly-chart-card,
+.today-card {
+  padding: 22px 24px 8px;
+}
+
+.today-card {
+  padding: 22px 22px 22px;
+}
+
+.weekly-chart-card h2,
+.today-card h2 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 18px;
+  color: var(--text-primary);
+}
+
+.today-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border-radius: var(--radius-md);
+  margin-bottom: 12px;
+}
+
+.today-row:last-child {
+  margin-bottom: 0;
+}
+
+.today-row-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.today-row-value {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.today-green {
+  background: var(--green-light);
+}
+.today-green .today-row-label svg { color: var(--green); }
+.today-green .today-row-value { color: var(--green); }
+
+.today-red {
+  background: var(--red-light);
+}
+.today-red .today-row-label svg { color: var(--red); }
+.today-red .today-row-value { color: var(--red); }
+
+.today-orange {
+  background: var(--orange-light);
+}
+.today-orange .today-row-label svg { color: var(--orange); }
+.today-orange .today-row-value { color: var(--orange); }
+
+.today-orange-strong {
+  background: #ffedd5;
+}
+.today-orange-strong .today-row-label svg { color: #ea580c; }
+.today-orange-strong .today-row-value { color: #ea580c; }
+
+@media (max-width: 1100px) {
+  .stat-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .dashboard-lower {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .stat-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.evolution-chart-card {
+  padding: 22px 24px 8px;
+  margin-top: 20px;
+}
+
+.evolution-chart-card h2 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 18px;
+  color: var(--text-primary);
+}
+
+.dashboard-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.recent-alerts-card,
+.students-presence-card {
+  padding: 22px 24px;
+}
+
+.recent-alerts-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.recent-alerts-header h2,
+.students-presence-card h2 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.students-presence-card h2 {
+  margin-bottom: 16px;
+}
+
+.pending-pill {
+  background: var(--orange-light);
+  color: var(--orange);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.recent-alerts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.recent-alert-item {
+  background: var(--bg-page);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+}
+
+.recent-alert-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.recent-alert-score {
+  font-size: 12.5px;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+.students-presence-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.student-presence-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.student-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  background: var(--blue-light);
+  color: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12.5px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.student-presence-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.student-presence-bar-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 140px;
+  flex-shrink: 0;
+}
+
+.student-presence-bar-track {
+  flex: 1;
+  height: 7px;
+  border-radius: 999px;
+  background: #eef0f4;
+  overflow: hidden;
+}
+
+.student-presence-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+}
+
+.student-presence-pct {
+  font-size: 12.5px;
+  font-weight: 700;
+  width: 34px;
+  text-align: right;
+}
+
+@media (max-width: 1100px) {
+  .dashboard-bottom {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .student-presence-bar-wrap {
+    width: 90px;
+  }
+}
